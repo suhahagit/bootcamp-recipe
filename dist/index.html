@@ -22,8 +22,8 @@
         {{#each data}}
             <div class = 'recipe'>
                 <a class = 'title' href="{{href}}" onerror="defaultHref(this)">{{title}}</a>
-                <img class = 'thumbnail' src = '{{thumbnail}}'>
-                <ul>
+                <img class = 'thumbnail' src = '{{thumbnail}}' onclick="myImage(this)">
+                <ul> Ingredients
                     {{#each ingredients}}
                     <li>{{this}}</li>
                     {{/each}}

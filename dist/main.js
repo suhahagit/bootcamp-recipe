@@ -13,3 +13,7 @@ const displayRecipes = function(){
 const defaultHref = function(link){
     link.href = 'https://www.youtube.com/'
 }
+
+const myImage = function(img){
+    alert($(img).closest('div').find('ul').find('li').first().text())
+}
