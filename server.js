@@ -30,7 +30,6 @@ app.get('/recipes/:ingredient', function(req, res){
             href: r.href
         }
     })
-    //console.log(recipes)
     res.send(recipes)
 })  
 })
