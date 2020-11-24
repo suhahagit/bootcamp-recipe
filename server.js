@@ -21,7 +21,15 @@ app.get('/recipes/:ingredient', function(req, res){
         console.log('API request error')
         throw err; 
     }
-    const recipes = JSON.parse(data).results
+    const recipesData = JSON.parse(data).results
+    const recipes = recipesData.map(r => {
+        return {
+            ingredients: r.ingredients,
+            title: r.title, 
+            thumbnail: r.thumbnail,
+            href: r.href
+        }
+    })
     //console.log(recipes)
     res.send(recipes)
 })  
